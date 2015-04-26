@@ -1,5 +1,31 @@
 conferences = [
   {
+    name: "Madison+ Ruby",
+    location: "Potsdam, Germany",
+    twitter_username: "madisonruby",
+    image_url: "https://pbs.twimg.com/profile_images/1219972840/MadisonRuby-Logo-NoText.png",
+    start_date: Date.parse("August 20, 2015"),
+    end_date: Date.parse("August 22, 2015"),
+    website: "http://madisonpl.us/ruby"
+  },
+  {
+    name: "eurucamp",
+    location: "Potsdam, Germany",
+    twitter_username: "eurucamp",
+    image_url: "https://pbs.twimg.com/profile_images/460678574236655616/-_lY_zdU.png",
+    start_date: Date.parse("July 31, 2015"),
+    end_date: Date.parse("July 31, 2015"),
+    website: "http://2015.eurucamp.org/"
+  },
+  {
+    name: "Burlington Ruby Conference",
+    location: "Burlington, VT",
+    twitter_username: "btvrubyconf",
+    image_url: "https://pbs.twimg.com/profile_images/574227483320434688/qEp5YxWK.png",
+    start_date: Date.parse("July 31, 2015"),
+    end_date: Date.parse("July 31, 2015")
+  },
+  {
     name: "JRubyConf EU",
     location: "Potsdam, Germany",
     twitter_username: "jrubyconfeu",
