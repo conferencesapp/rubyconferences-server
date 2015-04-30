@@ -37,9 +37,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    airbrake (4.1.0)
-      builder
-      multi_json
     arel (6.0.0)
     autoprefixer-rails (5.1.10)
       execjs
@@ -94,6 +91,8 @@ GEM
       thread_safe
     email_validator (1.5.0)
       activemodel
+    errorapp_notifier (0.1.1)
+      rack
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -290,7 +289,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake
   autoprefixer-rails
   awesome_print
   bourbon (~> 4.2.0)
@@ -302,6 +300,7 @@ DEPENDENCIES
   delayed_job_active_record
   dotenv-rails
   email_validator
+  errorapp_notifier
   factory_girl_rails
   flutie
   formulaic
