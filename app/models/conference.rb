@@ -1,11 +1,8 @@
 class Conference < ActiveRecord::Base
-  validates :end_date, presence: true
-  validates :image_url, presence: true
-  validates :location, presence: true
   validates :name, presence: true
+  validates :location, presence: true
   validates :start_date, presence: true
-  validates :twitter_username, presence: true
-  validates :website, presence: true
+  validates :end_date, presence: true
 
   def self.upcoming
     where("start_date >= ?", Date.today).order("start_date")
