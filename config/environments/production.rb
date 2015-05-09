@@ -1,4 +1,3 @@
-require Rails.root.join("config/smtp")
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -68,7 +67,7 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = SMTP_SETTINGS
+  # config.action_mailer.smtp_settings = SMTP_SETTINGS
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -84,6 +83,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
+  # config.action_mailer.default_url_options = { host: ENV.fetch("HOST") }
 end
 Rack::Timeout.timeout = (ENV["RACK_TIMEOUT"] || 10).to_i

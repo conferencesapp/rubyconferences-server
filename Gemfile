@@ -6,6 +6,7 @@ gem "autoprefixer-rails"
 gem "bourbon", "~> 4.2.0"
 gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
+gem "dotenv-rails"
 gem "email_validator"
 gem "flutie"
 gem "high_voltage"
@@ -34,10 +35,15 @@ group :development do
 end
 
 group :development, :test do
+  gem "capistrano", "~> 3.4.0"
+  gem "capistrano-bundler"
+  gem "capistrano-deploytags", "~> 1.0.0", require: false
+  gem "capistrano-rails"
+  gem "capistrano-rvm"
+  gem "capistrano3-puma", github: "seuros/capistrano-puma"
   gem "awesome_print"
   gem "bundler-audit", require: false
   gem "byebug"
-  gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.1.0"
