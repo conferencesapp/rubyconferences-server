@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20150509210202) do
   enable_extension "plpgsql"
 
   create_table "conferences", force: :cascade do |t|
-    t.string   "name",             null: false
-    t.string   "location",         null: false
-    t.string   "twitter_username", null: false
-    t.string   "image_url",        null: false
+    t.string   "name"
+    t.string   "location"
+    t.string   "twitter_username"
+    t.string   "image_url"
     t.text     "description"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "start_date",       null: false
-    t.string   "end_date",         null: false
-    t.string   "website",          null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "website"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150509210202) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "devices", force: :cascade do |t|
-    t.string   "token"
+    t.string   "token",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

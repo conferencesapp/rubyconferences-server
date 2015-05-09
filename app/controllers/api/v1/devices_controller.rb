@@ -2,9 +2,12 @@ class Api::V1::DevicesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create
 
   def create
-    Device.create(device_params)
-
-    head :ok
+    device = Device.new(device_params)
+    if device.save
+      head :ok
+    else
+      render json: device.errors, status: :unprocessable_entity
+    end
   end
 
   private
