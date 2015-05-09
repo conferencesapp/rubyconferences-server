@@ -34,6 +34,12 @@ group :development do
 end
 
 group :development, :test do
+  gem "capistrano", "~> 3.4.0"
+  gem "capistrano-bundler"
+  gem "capistrano-deploytags", "~> 1.0.0", require: false
+  gem "capistrano-rails"
+  gem "capistrano-rvm"
+  gem "capistrano3-puma", github: "seuros/capistrano-puma"
   gem "awesome_print"
   gem "bundler-audit", require: false
   gem "byebug"
