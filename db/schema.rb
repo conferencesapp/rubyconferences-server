@@ -11,22 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150426200058) do
+ActiveRecord::Schema.define(version: 20150509210202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "conferences", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "twitter_username"
-    t.string   "image_url"
+    t.string   "name",             null: false
+    t.string   "location",         null: false
+    t.string   "twitter_username", null: false
+    t.string   "image_url",        null: false
     t.text     "description"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "website"
+    t.string   "start_date",       null: false
+    t.string   "end_date",         null: false
+    t.string   "website",          null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -44,5 +44,11 @@ ActiveRecord::Schema.define(version: 20150426200058) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
