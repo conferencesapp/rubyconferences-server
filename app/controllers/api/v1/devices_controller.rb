@@ -2,7 +2,8 @@ class Api::V1::DevicesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create
 
   def create
-    device = Device.new(device_params)
+    device = Device.find_or_create_by(token: device_params[:token])
+
     if device.save
       head :ok
     else
