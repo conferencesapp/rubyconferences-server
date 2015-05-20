@@ -1,106 +1,27 @@
-conferences = [
-  {
-    name: "Madison+ Ruby",
-    location: "Potsdam, Germany",
-    twitter_username: "madisonruby",
-    image_url: "https://pbs.twimg.com/profile_images/1219972840/MadisonRuby-Logo-NoText.png",
-    start_date: Date.parse("August 20, 2015"),
-    end_date: Date.parse("August 22, 2015"),
-    website: "http://madisonpl.us/ruby"
-  },
-  {
-    name: "eurucamp",
-    location: "Potsdam, Germany",
-    twitter_username: "eurucamp",
-    image_url: "https://pbs.twimg.com/profile_images/460678574236655616/-_lY_zdU.png",
-    start_date: Date.parse("July 31, 2015"),
-    end_date: Date.parse("July 31, 2015"),
-    website: "http://2015.eurucamp.org/"
-  },
-  {
-    name: "Burlington Ruby Conference",
-    location: "Burlington, VT",
-    twitter_username: "btvrubyconf",
-    image_url: "https://pbs.twimg.com/profile_images/574227483320434688/qEp5YxWK.png",
-    start_date: Date.parse("July 31, 2015"),
-    end_date: Date.parse("July 31, 2015")
-  },
-  {
-    name: "JRubyConf EU",
-    location: "Potsdam, Germany",
-    twitter_username: "jrubyconfeu",
-    image_url: "https://pbs.twimg.com/profile_images/3495510306/c7112b8467087af09d3061e4575ac36b_400x400.png",
-    start_date: Date.parse("July 31, 2015"),
-    end_date: Date.parse("July 31, 2015")
-  },
-  {
-    name: "Brighton Ruby",
-    location: "Brighton, UK",
-    twitter_username: "brightonruby",
-    image_url: "https://pbs.twimg.com/profile_images/430399697090387968/ERkMia_c_400x400.png",
-    start_date: Date.parse("July 20, 2015"),
-    end_date: Date.parse("July 20, 2015")
-  },
-  {
-    name: "Gotham Ruby Conference",
-    location: "New York, NY",
-    twitter_username: "goruco",
-    image_url: "https://pbs.twimg.com/profile_images/64991940/logo_400x400.png",
-    start_date: Date.parse("June 20"),
-    end_date: Date.parse("June 20")
-  },
-  {
-    name: "RubyNation",
-    location: "Washington, DC",
-    twitter_username: "rubynation",
-    image_url: "https://pbs.twimg.com/profile_images/565325260547833856/TsQqkrwY_400x400.png",
-    start_date: Date.parse("June 12"),
-    end_date: Date.parse("June 13")
-  },
-  {
-    name: "RedDotRubyConf",
-    location: "Singapore",
-    twitter_username: "reddotrubyconf",
-    image_url: "https://pbs.twimg.com/profile_images/3261940620/0a27e2dfbd04ac82ccde7502b9b3d16d_400x400.png",
-    start_date: Date.parse("June 4"),
-    end_date: Date.parse("June 5")
-  },
-  {
-    name: "Ruby Conference Kiev",
-    location: "Kiev, Ukraine",
-    twitter_username: "rubyc_eu",
-    image_url: "https://pbs.twimg.com/profile_images/517668915854319616/2seWeRRJ.png",
-    start_date: Date.parse("May 30"),
-    end_date: Date.parse("May 31")
-  },
-  {
-    name: "RubyConf Kenya",
-    location: "Nairobi, Kenya",
-    twitter_username: "nairubyke",
-    image_url: "https://pbs.twimg.com/profile_images/459584639523241985/wuuZhm6Y_400x400.png",
-    start_date: Date.parse("May 8"),
-    end_date: Date.parse("May 9")
-  },
-  {
-    name: "ROSSConf Vienna",
-    location: "Vienna, Austria",
-    twitter_username: "rossconf",
-    image_url: "https://pbs.twimg.com/profile_images/529674584841134080/imnkYmgX_400x400.png",
-    start_date: Date.parse("April 25"),
-    end_date: Date.parse("April 25")
-  },
-  {
-    name: "RailsConf",
-    location: "Atlanta, GA",
-    twitter_username: "railsconf",
-    image_url: "https://pbs.twimg.com/profile_images/555794992384327680/l6g_DE69.jpeg",
-    start_date: Date.parse("April 21"),
-    end_date: Date.parse("April 23")
-  }
-]
+require 'net/http'
+require 'uri'
 
+conferences = YAML.load(File.read("#{Rails.root}/db/rubyconferences.yml"))
 Conference.delete_all
 
-conferences.each do |conference|
-  Conference.create!(conference)
+conferences.each do |attributes|
+  conference = Conference.new
+  conference.name = attributes["name"]
+  conference.location = attributes["location"]
+  conference.website = attributes["website"]
+  conference.twitter_username = attributes["twitter_username"]
+  conference.start_date = Date.parse(attributes["start_date"])
+  conference.end_date = Date.parse(attributes["end_date"])
+
+  twitter_image_url = URI(
+    "https://twitter.com/#{attributes["twitter_username"]}/profile_image?size=bigger"
+  )
+  res = Net::HTTP.get_response(
+    twitter_image_url
+  )
+
+  conference.image_url = res['location']
+
+  puts "Saving #{conference.name}"
+  conference.save!
 end

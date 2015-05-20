@@ -1,0 +1,622 @@
+- name: RubyConf Kenya
+  location: Nairobi, Kenya
+  start_date: "May 8, 2015"
+  end_date: "May 9, 2015"
+  website: http://ruby-conf-ke.nairuby.org
+  twitter_username: nairubyke
+
+- name: Ruby Conference Kiev
+  location: Kiev, Ukraine
+  start_date: "May 30, 2015"
+  end_date: "May 31, 2015"
+  website: http://rubyc.eu/
+  twitter_username: rubyc_eu
+
+- name: RedDotRubyConf
+  location: Singapore
+  start_date: "June 4, 2015"
+  end_date: "June 5, 2015"
+  website: http://www.reddotrubyconf.com/
+  twitter_username: reddotrubyconf
+
+- name: RubyNation
+  location: Washington, DC
+  start_date: "June 12, 2015"
+  end_date: "June 13, 2015"
+  website: http://www.rubynation.org/
+  twitter_username: rubynation
+
+- name: Gotham Ruby Conference
+  location: New York, NY
+  start_date: "June 20, 2015"
+  end_date: "June 20, 2015"
+  website: http://goruco.com/
+  twitter_username: goruco
+
+- name: Brighton Ruby
+  location: Brighton, UK
+  start_date: "July 20, 2015"
+  end_date: "July 20, 2015"
+  website: http://www.brightonruby.com/
+  twitter_username: brightonruby
+
+- name: JRubyConf EU
+  location: Potsdam, Germany
+  start_date: "July 31, 2015"
+  end_date: "July 31, 2015"
+  website: http://jrubyconf.eu
+  twitter_username: jrubyconfeu
+
+- name: Bwebsiteington Ruby Conference
+  location: Bwebsiteington, VT
+  start_date: "July 31, 2015"
+  end_date: "August 2, 2015"
+  website: http://bwebsiteingtonrubyconference.com/
+  twitter_username: btvrubyconf
+
+- name: eurucamp
+  location: Potsdam, Germany
+  start_date: "July 31, 2015"
+  end_date: "August 2, 2015"
+  website: http://eurucamp.org
+  twitter_username: eurucamp
+
+- name: DeccanRubyConf
+  location: Pune, India
+  start_date: "August 8, 2015"
+  end_date: "August 8, 2015"
+  website: http://www.deccanrubyconf.org
+  twitter_username: deccanrubyconf
+
+- name: Madison+ Ruby
+  location: Madison, WI
+  start_date: "August 20, 2015"
+  end_date: "August 22, 2015"
+  website: http://madisonpl.us/ruby/
+  twitter_username: madisonruby
+
+- name: Ruby Midwest
+  location: Kansas City, MO
+  start_date: "August 28, 2015"
+  end_date: "August 29, 2015"
+  website: http://rubymidwest.com/
+  twitter_username: rubymidwest
+
+- name: Barcelona Ruby Conf
+  location: Barcelona, Spain
+  start_date: "September 1, 2015"
+  end_date: "September 2, 2015"
+  website: http://www.baruco.org/
+  twitter_username: baruco
+
+- name: RubyConf Taiwan
+  location: Taipei, Taiwan
+  start_date: "September 11, 2015"
+  end_date: "September 12, 2015"
+  website: http://rubyconf.tw/
+  twitter_username: rubytaiwan
+
+- name: RubyConf Portugal
+  location: Braga, Portugal
+  start_date: "September 14, 2015"
+  end_date: "September 15, 2015"
+  website: http://rubyconf.pt
+  twitter_username: rubyconfpt
+
+- name: WindyCityRails
+  location: Chicago, IL
+  start_date: "September 17, 2015"
+  end_date: "September 18, 2015"
+  website: http://www.windycityrails.org/
+  twitter_username: windycityrails
+
+- name: RubyConf Brazil
+  location: São Paulo, Brazil
+  start_date: "September 18, 2015"
+  end_date: "September 19, 2015"
+  website: http://www.rubyconf.com.br/
+  twitter_username: rubyconfbr
+
+- name: Rocky Mountain Ruby Conference
+  location: Boulder, CO
+  start_date: "September 23, 2015"
+  end_date: "September 25, 2015"
+  website: http://www.rockymtnruby.com/
+  twitter_username: rockymtnruby
+
+- name: ArrrrCamp
+  location: Ghent, Belgium
+  start_date: "October 1, 2015"
+  end_date: "October 2, 2015"
+  website: http://2015.arrrrcamp.be
+  twitter_username: arrrrcamp
+
+- name: RubyConf Colombia
+  location: Medellin, Colombia
+  start_date: "October 15, 2015"
+  end_date: "October 16, 2015"
+  website: http://www.rubyconf.co/
+  twitter_username: rubyconfco
+
+- name: EuRuKo
+  location: Salzburg, Austria
+  start_date: "October 17, 2015"
+  end_date: "October 18, 2015"
+  website: http://www.euruko2015.org/
+  twitter_username: euruko
+
+- name: RubyWorld Conference
+  location: Matsue, Japan
+  start_date: "November 11, 2015"
+  end_date: "November 12, 2015"
+  website: http://www.rubyworld-conf.org/
+  twitter_username: rubyworldconf
+
+- name: RubyConf
+  location: San Antonio, TX
+  start_date: "November 15, 2015"
+  end_date: "November 17, 2015"
+  website: http://rubyconf.org/
+  twitter_username: rubyconf
+
+- name: RailsIsrael
+  location: Tel Aviv, Israel
+  start_date: "November 24, 2015"
+  end_date: "November 24, 2015"
+  website: http://railsisrael2015.events.co.il
+  twitter_username: fogelmania
+
+- name: Garden City RubyConf
+  location: Bangalore, India
+  start_date: "January 3, 2014"
+  end_date: "January 4, 2014"
+  website: http://www.gardencityruby.org/
+  twitter_username: gardencityrb
+
+- name: Rubyfuza
+  location: Cape Town, South Africa
+  start_date: "February 6, 2014"
+  end_date: "February 8, 2014"
+  website: http://rubyfuza.org/
+  twitter_username: rubyfuza
+
+- name: Los Angeles Ruby Conference
+  location: Los Angeles, CA
+  start_date: "February 8, 2014"
+  end_date: "February 8, 2014"
+  website: http://larubyconf.com/
+  twitter_username: larubyconf
+
+- name: Ruby Conf Australia
+  location: Sydney, Australia
+  start_date: "February 20, 2014"
+  end_date: "February 21, 2014"
+  website: http://www.rubyconf.org.au/
+  twitter_username: rubyconf_au
+
+- name: Big Ruby
+  location: Dallas, TX
+  start_date: "February 20, 2014"
+  end_date: "February 21, 2014"
+  website: http://www.bigrubyconf.com/
+  twitter_username: bigrubyconf
+
+- name: RubySauna
+  location: Oulu, Finland
+  start_date: "February 27, 2014"
+  end_date: "February 27, 2014"
+  website: http://www.rubysauna.org/
+  twitter_username: rubysauna
+
+- name: Ruby on Ales
+  location: Bend, OR
+  start_date: "March 6, 2014"
+  end_date: "March 7, 2014"
+  website: https://ruby.onales.com/
+  twitter_username: rbonales
+
+- name: wroc_love.rb
+  location: Wrocław, Poland
+  start_date: "March 14, 2014"
+  end_date: "March 16, 2014"
+  website: http://wrocloverb.com/
+  twitter_username: wrocloverb
+
+- name: MountainWest RubyConf
+  location: Salt Lake City, UT
+  start_date: "March 20, 2014"
+  end_date: "March 21, 2014"
+  website: http://mtnwestrubyconf.org/
+  twitter_username: mwrc
+
+- name: RubyConf India
+  location: Goa, India
+  start_date: "March 22, 2014"
+  end_date: "March 23, 2014"
+  website: http://rubyconfindia.org/
+  twitter_username: rubyconfindia
+
+- name: RubyConf Philippines
+  location: Manila, Philippines
+  start_date: "March 28, 2014"
+  end_date: "March 29, 2014"
+  website: http://rubyconf.ph/
+  twitter_username: rubyconfph
+
+- name: Ancient City Ruby
+  location: St. Augustine, FL
+  start_date: "April 3, 2014"
+  end_date: "April 4, 2014"
+  website: http://www.ancientcityruby.com/
+  twitter_username: ancientcityruby
+
+- name: RailsConf
+  location: Chicago, IL
+  start_date: "April 22, 2014"
+  end_date: "April 25, 2014"
+  website: http://www.railsconf.com/
+  twitter_username: railsconf
+
+- name: Abril Pro Ruby
+  location: Porto de Galinhas, Brazil
+  start_date: "April 24, 2014"
+  end_date: "April 27, 2014"
+  website: http://abrilproruby.com/
+  twitter_username: abrilproruby
+
+- name: RubyConf Taiwan
+  location: Taipei, Taiwan
+  start_date: "April 25, 2014"
+  end_date: "April 26, 2014"
+  website: http://rubyconf.tw/
+  twitter_username: rubytaiwan
+
+- name: Scottish Ruby Conf
+  location: Perthshire, Scotland
+  start_date: "May 12, 2014"
+  end_date: "May 13, 2014"
+  website: http://scottishrubyconference.com
+  twitter_username: scotrubyconf
+
+- name: RubyConf Uruguay
+  location: Montevideo, Uruguay
+  start_date: "May 23, 2014"
+  end_date: "May 24, 2014"
+  website: http://www.rubyconfuruguay.org/
+  twitter_username: rubyconfuruguay
+
+- name: "RubyMotion #inspect"
+  location: San Francisco, CA
+  start_date: "May 28, 2014"
+  end_date: "May 29, 2014"
+  website: http://www.rubymotion.com/conference/2014/
+  twitter_username: rubymotion
+
+- name: Ruby Conference Kiev
+  location: Kiev, Ukraine
+  start_date: "May 31, 2014"
+  end_date: "June 1, 2014"
+  website: http://rubyc.eu/
+  twitter_username: rubyc_eu
+
+- name: RubyNation
+  location: Washington, DC
+  start_date: "June 6, 2014"
+  end_date: "June 7, 2014"
+  website: http://www.rubynation.org/
+  twitter_username: rubynation
+
+- name: Ruby Lugdunum
+  location: Lyon, France
+  start_date: "June 19, 2014"
+  end_date: "June 20, 2014"
+  website: http://rulu.eu
+  twitter_username: rulu
+
+- name: Gotham Ruby Conference
+  location: New York, NY
+  start_date: "June 21, 2014"
+  end_date: "June 21, 2014"
+  website: http://goruco.com/
+  twitter_username: goruco
+
+- name: RedDotRubyConf
+  location: Singapore
+  start_date: "June 26, 2014"
+  end_date: "June 27, 2014"
+  website: http://reddotrubyconf.com/
+  twitter_username: reddotrubyconf
+
+- name: Deccan Ruby Conference
+  location: Pune, India
+  start_date: "July 19, 2014"
+  end_date: "July 19, 2014"
+  website: http://www.deccanrubyconf.org/
+  twitter_username: deccanrubyconf
+
+- name: Brighton Ruby Conf
+  location: Brighton, UK
+  start_date: "July 21, 2014"
+  end_date: "July 21, 2014"
+  website: http://brightonruby.com/
+  twitter_username: brightonruby
+
+- name: Bwebsiteington Ruby Conference
+  location: Bwebsiteington, VT
+  start_date: "August 1, 2014"
+  end_date: "August 3, 2014"
+  website: http://bwebsiteingtonrubyconference.com/
+  twitter_username: btvrubyconf
+
+- name: eurucamp
+  location: Potsdam, Germany
+  start_date: "August 1, 2014"
+  end_date: "August 3, 2014"
+  website: http://2014.eurucamp.org
+  twitter_username: eurucamp
+
+- name: JRubyConf EU
+  location: Potsdam, Germany
+  start_date: "August 1, 2014"
+  end_date: "August 1, 2014"
+  website: http://jrubyconf.eu/
+  twitter_username: jrubyconfeu
+
+- name: Cascadia Ruby
+  location: Portland, OR
+  start_date: "August 11, 2014"
+  end_date: "August 12, 2014"
+  website: http://cascadiaruby.com/
+  twitter_username: cascadiaruby
+
+- name: Steel City Ruby
+  location: Pittsburgh, PA
+  start_date: "August 15, 2014"
+  end_date: "August 16, 2014"
+  website: http://steelcityruby.org/
+  twitter_username: steelcityruby
+
+- name: Madison+ Ruby
+  location: Madison, WI
+  start_date: "August 22, 2014"
+  end_date: "August 23, 2014"
+  website: http://madisonpl.us/ruby/
+  twitter_username: madisonruby
+
+- name: RedFrogConf
+  location: Sankt Augustin, Germany
+  start_date: "August 23, 2014"
+  end_date: "August 24, 2014"
+  website: http://ruby.froscon.org/
+  twitter_username: redfrogconf
+
+- name: RubyConf Brazil
+  location: São Paulo, Brazil
+  start_date: "August 28, 2014"
+  end_date: "August 29, 2014"
+  website: http://www.rubyconf.com.br/
+  twitter_username: rubyconfbr
+
+- name: WindyCityRails
+  location: Chicago, IL
+  start_date: "September 4, 2014"
+  end_date: "September 5, 2014"
+  website: http://www.windycityrails.org/
+  twitter_username: windycityrails
+
+- name: Frozen Rails
+  location: Helsinki, Finland
+  start_date: "September 11, 2014"
+  end_date: "September 12, 2014"
+  website: http://frozenrails.eu/
+  twitter_username: frozenrails
+
+- name: Barcelona Ruby Conf
+  location: Barcelona, Spain
+  start_date: "September 11, 2014"
+  end_date: "September 13, 2014"
+  website: http://www.baruco.org/
+  twitter_username: baruco
+
+- name: RubyKaigi
+  location: Tokyo, Japan
+  start_date: "September 18, 2014"
+  end_date: "September 20, 2014"
+  website: http://rubykaigi.org
+  twitter_username: rubykaigi
+
+- name: Golden Gate Ruby Conference
+  location: San Francisco, CA
+  start_date: "September 19, 2014"
+  end_date: "September 20, 2014"
+  website: http://gogaruco.com/
+  twitter_username: gogaruco
+
+- name: Rocky Mountain Ruby Conference
+  location: Boulder, CO
+  start_date: "September 25, 2014"
+  end_date: "September 26, 2014"
+  website: http://rockymtnruby.com/
+  twitter_username: rockymtnruby
+
+- name: Rails Pacific
+  location: Taipei, Taiwan
+  start_date: "September 26, 2014"
+  end_date: "September 27, 2014"
+  website: http://railspacific.com
+  twitter_username: railspacific
+
+- name: RailsClub
+  location: Moscow, Russia
+  start_date: "September 27, 2014"
+  end_date: "September 27, 2014"
+  website: http://railsclub.ru/
+  twitter_username: railsclub_ru
+
+- name: ArrrrCamp
+  location: Ghent, Belgium
+  start_date: "October 2, 2014"
+  end_date: "October 3, 2014"
+  website: http://arrrrcamp.be/
+  twitter_username: arrrrcamp
+
+- name: Nickel City Ruby Conference
+  location: Buffalo, NY
+  start_date: "October 3, 2014"
+  end_date: "October 4, 2014"
+  website: http://nickelcityruby.com/
+  twitter_username: nickelcityruby
+
+- name: Ruby DCamp
+  location: Prince William Forest Park, VA
+  start_date: "October 10, 2014"
+  end_date: "October 12, 2014"
+  website: http://rubydcamp.org/
+  twitter_username: ruby_dcamp
+
+- name: RubyConf Portugal
+  location: Braga, Portugal
+  start_date: "October 13, 2014"
+  end_date: "October 14, 2014"
+  website: http://rubyconf.pt/
+  twitter_username: rubyconfpt
+
+- name: Keep Ruby Weird
+  location: Austin, TX
+  start_date: "October 24, 2014"
+  end_date: "October 24, 2014"
+  website: http://keeprubyweird.com/
+  twitter_username: keeprubyweird
+
+- name: RubyConf Argentina
+  location: Buenos Aires, Argentina
+  start_date: "October 24, 2014"
+  end_date: "October 25, 2014"
+  website: http://rubyconfargentina.org/
+  twitter_username: rubyconfar
+
+- name: RailsIsrael
+  location: Tel Aviv, Israel
+  start_date: "November 4, 2014"
+  end_date: "November 5, 2014"
+  website: http://railsisrael2014.events.co.il/
+  twitter_username: fogelmania
+
+- name: RubyWorld Conference
+  location: Matsue, Japan
+  start_date: "November 13, 2014"
+  end_date: "November 14, 2014"
+  website: http://www.rubyworld-conf.org/
+  twitter_username: rubyworldconf
+
+- name: RubyConf
+  location: San Diego, CA
+  start_date: "November 17, 2014"
+  end_date: "November 19, 2014"
+  website: http://rubyconf.org/
+  twitter_username: rubyconf
+
+- name: Garden City RubyConf
+  location: Bangalore, India
+  start_date: "January 10, 2015"
+  end_date: "January 10, 2015"
+  website: http://www.gardencityruby.org/
+  twitter_username: gardencityrb
+
+- name: Ruby devroom at FOSDEM
+  location: Brussels, Belgium
+  start_date: "January 31"
+  end_date: "February 1, 2015"
+  website: http://fosdem-ruby.github.io/
+  twitter_username: ruby_fosdem
+
+- name: Ruby Conf Australia
+  location: Melbourne, Australia
+  start_date: "February 4, 2015"
+  end_date: "February 7, 2015"
+  website: http://www.rubyconf.org.au/
+  twitter_username: rubyconf_au
+
+- name: Rubyfuza
+  location: Cape Town, South Africa
+  start_date: "February 5, 2015"
+  end_date: "February 6, 2015"
+  website: http://rubyfuza.org/
+  twitter_username: rubyfuza
+
+- name: Ruby on Ales
+  location: Bend, OR
+  start_date: "March 5, 2015"
+  end_date: "March 6, 2015"
+  website: https://ruby.onales.com/
+  twitter_username: rbonales
+
+- name: Tropical Ruby
+  location: Porto de Galinhas, Brazil
+  start_date: "March 5, 2015"
+  end_date: "March 8, 2015"
+  website: http://tropicalrb.com/
+  twitter_username: tropicalrb
+
+- name: MountainWest RubyConf
+  location: Salt Lake City, UT
+  start_date: "March 9, 2015"
+  end_date: "March 10, 2015"
+  website: http://mtnwestrubyconf.org
+  twitter_username: mwrc
+
+- name: Bath Ruby Conference
+  location: Bath, UK
+  start_date: "March 13, 2015"
+  end_date: "March 13, 2015"
+  website: http://2015.bathruby.org
+  twitter_username: BathRuby
+
+- name: wroc_love.rb
+  location: Wrocław, Poland
+  start_date: "March 13, 2015"
+  end_date: "March 15, 2015"
+  website: http://wrocloverb.com/
+  twitter_username: wrocloverb
+
+- name: RubyConfLT
+  location: Vilnius, Lithuania
+  start_date: "March 21, 2015"
+  end_date: "March 21, 2015"
+  website: http://www.rubyconf.lt
+  twitter_username: rubyconflt
+
+- name: Ancient City Ruby
+  location: St. Augustine, FL
+  start_date: "March 26, 2015"
+  end_date: "March 27, 2015"
+  website: http://www.ancientcityruby.com/
+  twitter_username: ancientcityruby
+
+- name: RubyConf Philippines
+  location: Boracay Island, Philippines
+  start_date: "March 27, 2015"
+  end_date: "March 28, 2015"
+  website: http://rubyconf.ph/
+  twitter_username: rubyconfph
+
+- name: Ruby Conf India
+  location: Goa, India
+  start_date: "April 3, 2015"
+  end_date: "April 5, 2015"
+  website: http://rubyconfindia.org/
+  twitter_username: rubyconfindia
+
+- name: RailsConf
+  location: Atlanta, GA
+  start_date: "April 21, 2015"
+  end_date: "April 23, 2015"
+  website: http://www.railsconf.com/
+  twitter_username: railsconf
+
+- name: ROSSConf Vienna
+  location: Vienna, Austria
+  start_date: "April 25, 2015"
+  end_date: "April 25, 2015"
+  website: http://www.rossconf.io/
+  twitter_username: rossconf
