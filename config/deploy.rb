@@ -1,7 +1,7 @@
 lock '3.4.0'
 
 set :application, 'rubyconferences'
-set :repo_url, 'git@bitbucket.org:binaryfunction/rubyconferences-server.git'
+set :repo_url, 'git@github.com:raysrashmi/rubyconferences-server.git'
 set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 set :deploy_via, :remote_cache
 set :scm, :git
