@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :device do
-    token "MyString"
+    sequence(:token) { |n| "token-#{n}" }
   end
-
 end
