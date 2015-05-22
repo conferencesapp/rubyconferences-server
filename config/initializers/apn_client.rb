@@ -3,4 +3,9 @@ if Rails.env.production?
 else
   APN_CLIENT = Houston::Client.development
 end
-APN_CLIENT.certificate = File.read(ENV.fetch("PUSH_NOTIFICATION_CERTIFICATE_PATH"))
+
+if Rails.env.test?
+  APN_CLIENT.certificate = ""
+else
+  APN_CLIENT.certificate = File.read(ENV.fetch("PUSH_NOTIFICATION_CERTIFICATE_PATH"))
+end
