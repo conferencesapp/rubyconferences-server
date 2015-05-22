@@ -75,6 +75,7 @@ GEM
       highline (~> 1.7.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    daemons (1.1.9)
     database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     delayed_job (4.0.6)
@@ -301,6 +302,7 @@ DEPENDENCIES
   byebug
   capybara-webkit (>= 1.2.0)
   coffee-rails (~> 4.1.0)
+  daemons
   database_cleaner
   delayed_job_active_record
   dotenv-rails
