@@ -9,6 +9,7 @@ gem "delayed_job_active_record"
 gem "daemons"
 gem "dotenv-rails"
 gem "email_validator"
+gem "errorapp_notifier"
 gem "flutie"
 gem "high_voltage"
 gem "houston"
@@ -28,7 +29,7 @@ gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "title"
 gem "uglifier"
-gem 'errorapp_notifier'
+gem "whenever", require: false
 
 group :development do
   gem "spring"
