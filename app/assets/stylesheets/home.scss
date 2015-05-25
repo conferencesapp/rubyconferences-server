@@ -1,0 +1,58 @@
+.container {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+.page-content {
+  @include align-items(center);
+  @include display(flex);
+  @include flex(1);
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 0 ($spacing-block * 2);
+  width: 100%;
+
+  @include media(max-width $small-snap) {
+    display: inline-block;
+    padding: 0 $spacing-block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.app-icon {
+  margin-bottom: $spacing-block * 3;
+
+  @include media(max-width $small-snap) {
+    @include size(60px 60px);
+    margin-bottom:  $spacing-block;
+  }
+}
+
+.iphone,
+.app-copy {
+  @include flex(none);
+  display: inline-block;
+}
+
+.iphone {
+  @include size(306px 627px);
+  margin: ($spacing-block * 2) 0;
+}
+
+.app-copy {
+  margin-right: $spacing-block;
+  width: 330px;
+
+  @include media(max-width $small-snap) {
+    margin-right: 0;
+    margin-top: $spacing-block * 2;
+    width: 100%;
+  }
+}
+
+.app-store-badge {
+  display: inline-block;
+  margin: ($spacing-block * 2) 0 ($spacing-block * 3) 0;
+}
