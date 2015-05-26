@@ -2,8 +2,16 @@
   @include display(flex);
   @include flex-direction(column);
   min-height: 100vh;
+  background-color: #f2f2f2;
 }
 
+h1{
+  font-size: 35px;
+}
+
+p{
+  font-size: 20px;
+}
 .page-content {
   @include align-items(center);
   @include display(flex);
@@ -23,10 +31,12 @@
 
 .app-icon {
   margin-bottom: $spacing-block * 3;
+  margin-top: -200px;
 
   @include media(max-width $small-snap) {
     @include size(60px 60px);
     margin-bottom:  $spacing-block;
+    margin-top: 0px;
   }
 }
 
