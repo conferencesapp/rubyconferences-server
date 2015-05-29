@@ -6,4 +6,10 @@ class Api::V1::ConferencesController < ApplicationController
   def show
     @conference = Conference.find(params[:id])
   end
+
+  def past
+    @conferences = Conference.past
+
+    render :index
+  end
 end

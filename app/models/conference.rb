@@ -8,6 +8,10 @@ class Conference < ActiveRecord::Base
     where("start_date >= ?", Date.today).order("start_date")
   end
 
+  def self.past
+    where("start_date <= ?", Date.today).order("start_date")
+  end
+
   def when
     if start_date == end_date
       start_date.strftime('%B %d %Y')
