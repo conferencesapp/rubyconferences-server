@@ -12,7 +12,7 @@ class Conference < ActiveRecord::Base
   end
 
   def self.past
-    where("start_date <= ?", Date.today).order("start_date")
+    where("start_date < ?", Date.today).order("start_date DESC")
   end
 
   def when
