@@ -1,6 +1,9 @@
 class Conference < ActiveRecord::Base
   validates :name, presence: true
   validates :location, presence: true
+  validates :twitter_username, presence: true
+  validates :image_url, presence: true
+  validates :website, presence: true
   validates :start_date, presence: true
   validates :end_date, presence: true
 
