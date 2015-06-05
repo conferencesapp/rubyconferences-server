@@ -3,7 +3,7 @@ class AnnouncementJob < ActiveJob::Base
 
   def perform(announcement)
     Device.all.each_with_index do |device|
-      AnnouncementSender.new(announcement, device.token).run
+      AnnouncementSenderJob.perform_later(announcement, device)
     end
 
     announcement.update(sent: true)
