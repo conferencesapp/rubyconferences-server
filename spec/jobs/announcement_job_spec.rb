@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 describe AnnouncementJob, type: :job do
-  it "will invoke AnnouncementSender for devices" do
-    sender = double("Sender", run: nil)
-    allow(AnnouncementSender).to receive(:new).and_return(sender)
+  it "will invoke AnnouncementSenderJob for devices" do
+    allow(AnnouncementSenderJob).to receive(:perform_later)
     devices = create_list(:device, 2)
     announcement = create(:announcement)
     job = AnnouncementJob.new
@@ -11,8 +10,8 @@ describe AnnouncementJob, type: :job do
     job.perform(announcement)
 
     devices.each do |device|
-      expect(AnnouncementSender).
-        to have_received(:new).with(announcement, device.token)
+      expect(AnnouncementSenderJob).
+        to have_received(:perform_later).with(announcement, device)
     end
   end
 
