@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       resources :devices, only: [:create]
     end
   end
+
+  get 'privacy' => 'high_voltage/pages#show', id: 'home'
 end
