@@ -2,10 +2,10 @@ require 'net/http'
 require 'uri'
 
 conferences = YAML.load(File.read("#{Rails.root}/db/rubyconferences.yml"))
-Conference.delete_all
+RubyConference.delete_all
 
 conferences.each do |attributes|
-  conference = Conference.new
+  conference = RubyConference.new
   conference.name = attributes["name"]
   conference.location = attributes["location"]
   conference.website = attributes["website"]

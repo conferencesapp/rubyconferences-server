@@ -7,5 +7,11 @@ FactoryGirl.define do
     twitter_username "twiiter"
     image_url "image_url"
     website "foo.bar"
+
+    factory :ruby_conference, class: "RubyConference" do
+    end
+
+    factory :js_conference, class: "JsConference" do
+    end
   end
 end

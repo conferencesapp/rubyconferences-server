@@ -1,0 +1,2 @@
+class RubyConference < Conference
+end

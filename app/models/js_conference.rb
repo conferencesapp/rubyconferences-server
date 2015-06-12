@@ -1,0 +1,2 @@
+class JsConference < Conference
+end

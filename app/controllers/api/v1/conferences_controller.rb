@@ -1,5 +1,5 @@
 class Api::V1::ConferencesController < ApplicationController
   def index
-    @conferences = Conference.upcoming
+    @conferences = RubyConference.upcoming
   end
 end
