@@ -2,16 +2,17 @@ require 'net/http'
 require 'uri'
 
 conferences = YAML.load(File.read("#{Rails.root}/db/rubyconferences.yml"))
-RubyConference.delete_all
+Conference.delete_all
 
 conferences.each do |attributes|
-  conference = RubyConference.new
+  conference = Conference.new
   conference.name = attributes["name"]
   conference.location = attributes["location"]
   conference.website = attributes["website"]
   conference.twitter_username = attributes["twitter_username"]
   conference.start_date = Date.parse(attributes["start_date"])
   conference.end_date = Date.parse(attributes["end_date"])
+  conference.tag_list = "ruby"
 
   twitter_image_url = URI(
     "https://twitter.com/#{attributes["twitter_username"]}/profile_image?size=bigger"

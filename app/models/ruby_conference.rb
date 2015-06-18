@@ -1,2 +1,0 @@
-class RubyConference < Conference
-end

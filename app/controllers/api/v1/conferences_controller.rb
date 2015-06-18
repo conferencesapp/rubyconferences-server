@@ -1,6 +1,6 @@
 class Api::V1::ConferencesController < ApplicationController
   def index
-    @conferences = RubyConference.upcoming
+    @conferences = Conference.tagged_with("ruby").upcoming
 
     render(
       json: @conferences,
