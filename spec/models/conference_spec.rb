@@ -46,4 +46,18 @@ RSpec.describe Conference, :type => :model do
       expect(Conference.past).to eq([old_conference, very_old_conference])
     end
   end
+
+  describe ".when" do
+    it "calls dateformatter" do
+      start_date = Date.today - 1.days
+      end_date = Date.today + 1.days
+      formatter = double("DateFormatter", to_s: nil)
+      allow(DateFormatter).to receive(:new).and_return(formatter)
+
+      build(:conference, start_date: start_date, end_date: end_date).when
+
+      expect(DateFormatter).to have_received(:new).with(start_date, end_date)
+      expect(formatter).to have_received(:to_s)
+    end
+  end
 end
