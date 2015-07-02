@@ -3,6 +3,27 @@ require "rails_helper"
 describe "/api/v1/conferences" do
   describe "get conferences" do
     context "for JSON" do
+      it "will render all required keys for v1" do
+        create(:conference, :ruby)
+
+        get "/api/v1/conferences"
+
+        expect(json.count).to eq(1)
+        expect(json.first.keys).to eq(
+          [
+            "id",
+            "name",
+            "location",
+            "twitter_username",
+            "image_url",
+            "start_date",
+            "end_date",
+            "website",
+            "when"
+          ]
+        )
+      end
+
       it "will render conferences tagged with ruby" do
         ruby_conference = create(:conference, :ruby)
         create(:conference, :javascript)
