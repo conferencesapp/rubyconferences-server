@@ -1,6 +1,8 @@
 class Conference < ActiveRecord::Base
   acts_as_taggable
 
+  mount_uploader :logo, LogoUploader
+
   validates :name, presence: true
   validates :location, presence: true
   validates :twitter_username, presence: true
