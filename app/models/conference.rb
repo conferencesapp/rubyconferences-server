@@ -22,4 +22,12 @@ class Conference < ActiveRecord::Base
   def when
     DateFormatter.new(start_date, end_date).to_s
   end
+
+  def logos
+    {
+      thumb: logo.thumb.url,
+      logo: logo.logo.url,
+      original: logo.url
+    }
+  end
 end

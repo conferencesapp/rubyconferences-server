@@ -14,6 +14,7 @@ end
 
 module Requests
   include JsonHelpers
+  include LoginHelpers
 end
 
 RSpec.configure do |config|

@@ -16,6 +16,10 @@ FactoryGirl.define do
       tag_list "javascript"
     end
 
+    trait :design do
+      tag_list "design"
+    end
+
     trait :upcoming do
       start_date Date.today + 100.days
       end_date Date.today + 101.days

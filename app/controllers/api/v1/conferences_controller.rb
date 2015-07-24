@@ -1,4 +1,6 @@
-class Api::V1::ConferencesController < ApplicationController
+class Api::V1::ConferencesController < Api::BaseController
+  skip_before_action :authenticate
+
   respond_to :json, :ics
 
   def index
