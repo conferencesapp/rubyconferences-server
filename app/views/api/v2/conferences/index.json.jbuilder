@@ -9,6 +9,8 @@ json.array!(@conferences) do |conference|
     :end_date,
     :website,
     :when,
-    :logos
+    :logos,
+    :latitude,
+    :longitude
   )
 end

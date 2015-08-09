@@ -19,7 +19,9 @@ describe "/api/v2/conferences" do
             "end_date",
             "website",
             "when",
-            "logos"
+            "logos",
+            "latitude",
+            "longitude"
           ]
         )
       end

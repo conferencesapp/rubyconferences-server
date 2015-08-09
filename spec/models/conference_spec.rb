@@ -60,4 +60,26 @@ RSpec.describe Conference, :type => :model do
       expect(formatter).to have_received(:to_s)
     end
   end
+
+  describe "geocoded_by" do
+    it "is geocoded_by location" do
+      expected_latitude = 40.7143528
+      expected_longitude = -74.0059731
+
+      conference = create(:conference)
+      Geocoder::Lookup::Test.add_stub(
+        conference.location, [
+          {
+            latitude: expected_latitude,
+            longitude: expected_longitude
+          }
+        ]
+      )
+
+      conference.geocode
+
+      expect(conference.latitude).to eq(expected_latitude)
+      expect(conference.longitude).to eq(expected_longitude)
+    end
+  end
 end

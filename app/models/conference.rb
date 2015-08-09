@@ -1,6 +1,8 @@
 class Conference < ActiveRecord::Base
   acts_as_taggable
 
+  geocoded_by :location
+
   mount_uploader :logo, LogoUploader
 
   validates :name, presence: true
