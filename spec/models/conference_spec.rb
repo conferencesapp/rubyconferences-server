@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Conference, :type => :model do
   it { should validate_presence_of(:name) }
@@ -47,7 +47,7 @@ RSpec.describe Conference, :type => :model do
     end
   end
 
-  describe ".when" do
+  describe "#when" do
     it "calls dateformatter" do
       start_date = Date.today - 1.days
       end_date = Date.today + 1.days
@@ -58,6 +58,34 @@ RSpec.describe Conference, :type => :model do
 
       expect(DateFormatter).to have_received(:new).with(start_date, end_date)
       expect(formatter).to have_received(:to_s)
+    end
+  end
+
+  describe "#cfp_status" do
+    context "when cfp_end_at not available" do
+      it "is open" do
+        conference = build(:conference, cfp_end_at: nil)
+
+        expect(conference.cfp_status).to eq("CFP is open")
+      end
+    end
+
+    context "when cfp_end_at available" do
+      context "when cfp_end_at is in future" do
+        it "is open" do
+          conference = build(:conference, cfp_end_at: Time.now + 1.day)
+
+          expect(conference.cfp_status).to eq("CFP is open till #{(Time.now + 1.day).strftime('%d %b %Y')}")
+        end
+      end
+
+      context "when cfp_end_at is in past" do
+        it "is closed" do
+          conference = build(:conference, cfp_end_at: Time.now - 1.day)
+
+          expect(conference.cfp_status).to eq("CFP has been closed on #{(Time.now - 1.day).strftime('%d %b %Y')}")
+        end
+      end
     end
   end
 

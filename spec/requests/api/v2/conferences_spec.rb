@@ -21,7 +21,9 @@ describe "/api/v2/conferences" do
             "when",
             "logos",
             "latitude",
-            "longitude"
+            "longitude",
+            "cfp_end_at",
+            "cfp_status"
           ]
         )
       end

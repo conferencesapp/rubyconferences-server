@@ -11,6 +11,8 @@ json.array!(@conferences) do |conference|
     :when,
     :logos,
     :latitude,
-    :longitude
+    :longitude,
+    :cfp_end_at,
+    :cfp_status
   )
 end
