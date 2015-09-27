@@ -4,6 +4,7 @@ json.array!(@conferences) do |conference|
     :id,
     :name,
     :location,
+    :description,
     :twitter_username,
     :start_date,
     :end_date,

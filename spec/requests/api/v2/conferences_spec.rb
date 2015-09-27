@@ -14,6 +14,7 @@ describe "/api/v2/conferences" do
             "id",
             "name",
             "location",
+            "description",
             "twitter_username",
             "start_date",
             "end_date",
