@@ -33,7 +33,7 @@ class Conference < ActiveRecord::Base
         "CFP has been closed on #{pretty_cfp_end_at}"
       end
     else
-      "CFP is open"
+      ""
     end
   end
 

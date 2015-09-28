@@ -63,10 +63,10 @@ RSpec.describe Conference, :type => :model do
 
   describe "#cfp_status" do
     context "when cfp_end_at not available" do
-      it "is open" do
+      it "is empty" do
         conference = build(:conference, cfp_end_at: nil)
 
-        expect(conference.cfp_status).to eq("CFP is open")
+        expect(conference.cfp_status).to eq("")
       end
     end
 
