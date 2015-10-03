@@ -66,7 +66,7 @@ RSpec.describe Conference, :type => :model do
       it "is empty" do
         conference = build(:conference, cfp_end_at: nil)
 
-        expect(conference.cfp_status).to eq("")
+        expect(conference.cfp_status).to eq("CFP date is unknown")
       end
     end
 
