@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authenticate
-    authenticate_or_request_with_http_token do |token, options|
-      token == ENV.fetch('API_SECRET')
+    unless ENV["API_SECRET"].blank?
+      authenticate_or_request_with_http_token do |token, options|
+        token == ENV.fetch("API_SECRET")
+      end
     end
   end
 end
