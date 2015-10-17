@@ -22,7 +22,8 @@ conferences.each do |attributes|
   )
 
   conference.image_url = res['location']
-
+  conference.remote_logo_url = res['location']
+  conference.geocode
   puts "Saving #{conference.name}"
   conference.save!
 end
