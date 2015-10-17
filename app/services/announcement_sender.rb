@@ -1,26 +1,26 @@
 class AnnouncementSender
-  def initialize(announcement, device_token, client = APN_CLIENT)
+  def initialize(announcement, device_token)
     @announcement = announcement
     @device_token = device_token
-    @client = client
   end
 
   def run
-    client.push(notification)
+    Rpush::Apns::Notification.new(
+      app: ios_app,
+      device_token: device_token,
+      alert: body
+    ).save!
   end
 
   private
 
-  attr_reader :announcement, :device_token, :client
+  attr_reader :announcement, :device_token
 
   def body
     announcement.body
   end
 
-  def notification
-    @notification ||= Houston::Notification.new(
-      token: device_token,
-      alert: body
-    )
+  def ios_app
+    @ios_app ||= Rpush::Apns::App.find_by_name("ios_app")
   end
 end

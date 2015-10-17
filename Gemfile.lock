@@ -80,8 +80,6 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
-    commander (4.3.2)
-      highline (~> 1.7.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     daemons (1.1.9)
@@ -126,9 +124,6 @@ GEM
       tilt
     high_voltage (2.3.0)
     highline (1.7.1)
-    houston (2.2.3)
-      commander (~> 4.1)
-      json
     i18n (0.7.0)
     i18n-tasks (0.8.2)
       activesupport
@@ -339,7 +334,6 @@ DEPENDENCIES
   formulaic
   geocoder
   high_voltage
-  houston
   i18n-tasks
   icalendar
   jbuilder

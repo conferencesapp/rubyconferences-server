@@ -2,30 +2,36 @@ require "rails_helper"
 
 describe AnnouncementSender do
   describe "run" do
-    it "will send push notifications for given device token" do
-      announcement = create(:announcement)
-      device_token = "device-token"
-      notification = double("Notification")
-      allow(Houston::Notification).to receive(:new).and_return(notification)
-      sender = AnnouncementSender.new(announcement, device_token, client)
+    context "when ios app exists" do
+      it "will send push notifications for given device token" do
+        announcement = create(:announcement)
+        Rpush::Apns::App.create!(
+          name: "ios_app",
+          environment: "sandbox",
+          certificate: File.read(
+            "spec/support/fixtures/cert_without_password.pem"
+          )
+        )
+        device_token = "4dae0f8c9135ad92\
+        de1cdf9ff87daa6f7336b7f07ca8ab0aa1b12b2dd1b20792"
+        sender = AnnouncementSender.new(announcement, device_token)
 
-      sender.run
+        sender.run
 
-      expect(Houston::Notification).
-        to have_received(:new).with(
-          token: device_token,
-          alert: announcement.body
-      )
-      expect(client).to have_received(:push).with(notification)
+        expect(Rpush::Apns::Notification.count).to eq(1)
+      end
     end
 
-    def client
-      @client ||= double("HoustonClient")
-      allow(@client).to receive(:gateway_uri=)
-      allow(@client).to receive(:feedback_uri=)
-      allow(@client).to receive(:push)
+    context "when ios app not exists" do
+      it "will raise error" do
+        announcement = create(:announcement)
+        device_token = "4dae0f8c9135ad92\
+        de1cdf9ff87daa6f7336b7f07ca8ab0aa1b12b2dd1b20792"
+        sender = AnnouncementSender.new(announcement, device_token)
 
-      @client
+        expect { sender.run }.to raise_error(ActiveRecord::RecordInvalid)
+        expect(Rpush::Apns::App.count).to eq(0)
+      end
     end
   end
 end
