@@ -17,6 +17,11 @@ class Conference < ActiveRecord::Base
     where("start_date >= ?", Date.today).order("start_date")
   end
 
+  # Specific bug in iOS version 1.2 with deleting old conferences from list
+  def self.v2_conferences
+    where("start_date >= ?", Date.parse("14 Oct 2015")).order("start_date")
+  end
+
   def self.past
     where("start_date < ?", Date.today).order("start_date DESC")
   end

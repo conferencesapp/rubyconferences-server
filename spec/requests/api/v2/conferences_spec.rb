@@ -41,15 +41,20 @@ describe "/api/v2/conferences" do
         expect(json.count).to eq(2)
       end
 
-      it "will render upcoming conferences" do
-        upcoming_ruby_conference = create(:conference, :ruby, :upcoming)
+      it "will render only v2 conferences" do
+        ruby_conference = create(
+          :conference,
+          :ruby,
+          start_date: Date.parse("14 Oct 2015")
+        )
+        create(:conference, :ruby, start_date: Date.parse("13 Oct 2015"))
         create(:conference, :ruby, :past)
 
         get "/api/v2/conferences", { tags: "ruby" }, token_auth
 
         expect(json.count).to eq(1)
-        expect(json.first["id"]).to eq(upcoming_ruby_conference.id)
-        expect(json.first["name"]).to eq(upcoming_ruby_conference.name)
+        expect(json.first["id"]).to eq(ruby_conference.id)
+        expect(json.first["name"]).to eq(ruby_conference.name)
       end
     end
   end

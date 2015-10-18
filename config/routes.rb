@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     namespace :v2 do
       resources :conferences, only: [:index]
     end
+
+    namespace :v3 do
+      resources :conferences, only: [:index]
+    end
   end
 
   get "privacy" => "high_voltage/pages#show", id: "home"

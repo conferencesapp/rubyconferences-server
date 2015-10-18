@@ -9,7 +9,7 @@ class Api::V2::ConferencesController < Api::BaseController
     @conferences || Conference.tagged_with(
       search_params,
       any: true
-    ).upcoming
+    ).v2_conferences
   end
 
   def search_params
