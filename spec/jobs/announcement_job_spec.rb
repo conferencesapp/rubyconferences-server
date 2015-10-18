@@ -1,18 +1,31 @@
 require 'rails_helper'
 
 describe AnnouncementJob, type: :job do
-  it "will invoke AnnouncementSenderJob for devices" do
-    allow(AnnouncementSenderJob).to receive(:perform_later)
+  it "will create rpush notifications" do
+    Rpush::Apns::App.create!(
+      name: "ios_app",
+      environment: "sandbox",
+      certificate: File.read(
+        "spec/support/fixtures/cert_without_password.pem"
+      )
+    )
     devices = create_list(:device, 2)
     announcement = create(:announcement)
     job = AnnouncementJob.new
 
     job.perform(announcement)
 
-    devices.each do |device|
-      expect(AnnouncementSenderJob).
-        to have_received(:perform_later).with(announcement, device)
-    end
+    expect(Rpush::Apns::Notification.count).to eq(2)
+    first_notification = Rpush::Apns::Notification.first
+    expect(first_notification.device_token).
+      to eq(devices.first.token)
+    expect(first_notification.alert).
+      to eq(announcement.body)
+    second_notification = Rpush::Apns::Notification.last
+    expect(second_notification.device_token).
+      to eq(devices.last.token)
+    expect(second_notification.alert).
+      to eq(announcement.body)
   end
 
   it "will mark announcement as sent" do
