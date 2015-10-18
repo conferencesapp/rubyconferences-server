@@ -24,4 +24,11 @@ RailsAdmin.config do |config|
     label 'Apple Push Notifications'
     navigation_label 'Push Notifications'
   end
+
+  config.included_models = RailsAdmin::Config.models_pool << 'Rpush::Apns::Feedback'
+
+  config.model Rpush::Apns::Feedback do
+    label 'Apple Push Feedbacks'
+    navigation_label 'Apple Feedbacks'
+  end
 end
