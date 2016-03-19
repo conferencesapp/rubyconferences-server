@@ -8,7 +8,8 @@ class AnnouncementSender
     Rpush::Apns::Notification.new(
       app: ios_app,
       device_token: device_token,
-      alert: body
+      alert: body,
+      data: { id: announcement.conference_id }
     ).save!
   end
 

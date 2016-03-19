@@ -2,9 +2,11 @@ require "rails_helper"
 
 describe AnnouncementSender do
   describe "run" do
+    let(:conference) { create :conference }
+
     context "when ios app exists" do
       it "will send push notifications for given device token" do
-        announcement = create(:announcement)
+        announcement = create(:conference_announcement, conference_id: conference.id)
         Rpush::Apns::App.create!(
           name: "ios_app",
           environment: "sandbox",
@@ -24,7 +26,7 @@ describe AnnouncementSender do
 
     context "when ios app not exists" do
       it "will raise error" do
-        announcement = create(:announcement)
+        announcement = create(:conference_announcement, conference_id: conference.id)
         device_token = "4dae0f8c9135ad92\
         de1cdf9ff87daa6f7336b7f07ca8ab0aa1b12b2dd1b20792"
         sender = AnnouncementSender.new(announcement, device_token)
