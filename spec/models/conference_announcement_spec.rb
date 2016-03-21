@@ -1,5 +1,12 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe ConferenceAnnouncement, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe ConferenceAnnouncement, type: :model do
+  describe "#validations" do
+    it { should validate_presence_of(:conference_id) }
+    it { should validate_presence_of(:body) }
+  end
+
+  describe "#associations" do
+    it { should belong_to :conference }
+  end
 end

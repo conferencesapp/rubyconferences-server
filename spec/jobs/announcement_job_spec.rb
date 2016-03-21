@@ -12,7 +12,7 @@ describe AnnouncementJob, type: :job do
       )
     )
     devices = create_list(:device, 2)
-    announcement = create(:conference_announcement, conference_id: conference.id)
+    announcement = create(:conference_announcement)
     job = AnnouncementJob.new
 
     job.perform(announcement)
