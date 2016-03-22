@@ -31,7 +31,7 @@ describe AnnouncementJob, type: :job do
   end
 
   it "will mark announcement as sent" do
-    announcement = create(:announcement, sent: false)
+    announcement = create(:conference_announcement, sent: false)
     job = AnnouncementJob.new
 
     job.perform(announcement)
