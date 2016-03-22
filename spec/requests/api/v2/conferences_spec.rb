@@ -52,7 +52,7 @@ describe "/api/v2/conferences" do
 
         get "/api/v2/conferences", { tags: "ruby" }, token_auth
 
-        expect(json.count).to eq(1)
+        expect(json.count).to eq(2)
         expect(json.first["id"]).to eq(ruby_conference.id)
         expect(json.first["name"]).to eq(ruby_conference.name)
       end

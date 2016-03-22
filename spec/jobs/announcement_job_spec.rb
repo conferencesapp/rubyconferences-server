@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe AnnouncementJob, type: :job do
+  let(:conference) { create :conference }
+
   it "will create rpush notifications" do
     Rpush::Apns::App.create!(
       name: "ios_app",
@@ -10,7 +12,7 @@ describe AnnouncementJob, type: :job do
       )
     )
     devices = create_list(:device, 2)
-    announcement = create(:announcement)
+    announcement = create(:conference_announcement)
     job = AnnouncementJob.new
 
     job.perform(announcement)
