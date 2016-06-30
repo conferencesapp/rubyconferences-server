@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319174500) do
+ActiveRecord::Schema.define(version: 20160715182553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,20 +32,21 @@ ActiveRecord::Schema.define(version: 20160319174500) do
   end
 
   create_table "conferences", force: :cascade do |t|
-    t.string   "name",             null: false
-    t.string   "location",         null: false
-    t.string   "twitter_username", null: false
-    t.string   "image_url",        null: false
+    t.string   "name",                             null: false
+    t.string   "location"
+    t.string   "twitter_username",                 null: false
+    t.string   "image_url"
     t.text     "description"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.date     "start_date",       null: false
-    t.date     "end_date",         null: false
-    t.string   "website",          null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "website"
     t.string   "logo"
     t.float    "latitude"
     t.float    "longitude"
     t.datetime "cfp_end_at"
+    t.boolean  "active",           default: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|

@@ -12,9 +12,12 @@
       <p>
         <%= link_to image_tag("app-store-badge.svg"), "https://itunes.apple.com/us/app/ruby-raven-information-about/id991154527"%>
       </p>
-      <p>
+      <div>
         Support: <%= mail_to "hello@conferencesapp.com" %>
-      </p>
+      </div>
+      <div>
+        <%= link_to "Add a new ruby conference", new_conference_path %>
+      </div>
     </div>
     <div class="iphone">
       <%= image_tag "iphone.png" %>

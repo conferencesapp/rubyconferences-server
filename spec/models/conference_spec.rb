@@ -2,12 +2,45 @@ require "rails_helper"
 
 RSpec.describe Conference, :type => :model do
   it { should validate_presence_of(:name) }
-  it { should validate_presence_of(:location) }
   it { should validate_presence_of(:twitter_username) }
-  it { should validate_presence_of(:image_url) }
-  it { should validate_presence_of(:website) }
-  it { should validate_presence_of(:start_date) }
-  it { should validate_presence_of(:end_date) }
+
+  context "#validations" do
+    let(:location) { "India" }
+    let(:conference) { create(:conference, active: true, location: location) }
+    before do
+      expected_latitude = 40.7143528
+      expected_longitude = -74.0059731
+
+      Geocoder::Lookup::Test.add_stub(
+        location, [
+          {
+            latitude: expected_latitude,
+            longitude: expected_longitude
+          }
+        ]
+      )
+    end
+
+    it "validates presence of website" do
+      expect(conference).to validate_presence_of(:website)
+    end
+
+    it "validates presence of location" do
+      expect(conference).to validate_presence_of(:location)
+    end
+
+    it "validates presence of image_url" do
+      expect(conference).to validate_presence_of(:image_url)
+    end
+
+    it "validates presence of start_date" do
+      expect(conference).to validate_presence_of(:start_date)
+    end
+
+    it "validates presence of end_date" do
+      expect(conference).to validate_presence_of(:end_date)
+    end
+  end
 
   describe ".upcoming" do
     it "returns upcoming Conferences based on start date" do
@@ -73,9 +106,11 @@ RSpec.describe Conference, :type => :model do
     context "when cfp_end_at available" do
       context "when cfp_end_at is in future" do
         it "is open" do
-          conference = build(:conference, cfp_end_at: Time.now + 1.day)
+          cfp_end_date = Time.now + 1.day
+          conference = build(:conference, cfp_end_at: cfp_end_date)
 
-          expect(conference.cfp_status).to eq("CFP is open till #{(Time.now + 1.day).strftime('%d %b %Y')}")
+          cfp_date = cfp_end_date.strftime("%d %b %Y")
+          expect(conference.cfp_status).to eq("CFP is open till #{cfp_date}")
         end
       end
 
