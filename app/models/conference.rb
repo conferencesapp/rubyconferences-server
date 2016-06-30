@@ -13,6 +13,8 @@ class Conference < ActiveRecord::Base
   validates :start_date, presence: true
   validates :end_date, presence: true
 
+  after_create :create_geocode_and_tag_list
+
   def self.upcoming
     where("start_date >= ?", Date.today).order("start_date")
   end
@@ -54,5 +56,11 @@ class Conference < ActiveRecord::Base
 
   def pretty_cfp_end_at
     cfp_end_at.strftime("%d %b %Y")
+  end
+
+  def create_geocode_and_tag_list
+    geocode
+    self.tags << "ruby"
+    self.save
   end
 end
