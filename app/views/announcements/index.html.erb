@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table>
+      <tbody>
+        <% @pending_announcements.each do |announcement| %>
+          <tr>
+            <td><%= announcement.id %></td>
+            <td><%= announcement.conference_id %></td>
+            <td><%= announcement.body %></td>
+            <td><%= announcement.sent? %></td>
+            <td><%= link_to "send notifictation", send_notification_announcement_path(announcement) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
