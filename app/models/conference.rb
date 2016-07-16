@@ -5,13 +5,18 @@ class Conference < ActiveRecord::Base
 
   mount_uploader :logo, LogoUploader
 
+  with_options if: :active? do |object|
+    object.validates :website, presence: true
+    object.validates :image_url, presence: true
+    object.validates :location, presence: true
+    object.validates :start_date, presence: true
+    object.validates :end_date, presence: true
+  end
+
   validates :name, presence: true
-  validates :location, presence: true
   validates :twitter_username, presence: true
-  validates :image_url, presence: true
-  validates :website, presence: true
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+
+  after_update :create_geocode_and_tag_list
 
   def self.upcoming
     where("start_date >= ?", Date.today).order("start_date")
@@ -54,5 +59,12 @@ class Conference < ActiveRecord::Base
 
   def pretty_cfp_end_at
     cfp_end_at.strftime("%d %b %Y")
+  end
+
+  def create_geocode_and_tag_list
+    if active?
+      geocode
+      self.tag_list << "ruby"
+    end
   end
 end

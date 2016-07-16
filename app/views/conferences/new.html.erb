@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Tell us about a new Conference
+      </div>
+      <div class="panel-body">
+        <%= simple_form_for @conference do |f| %>
+          <%= f.input :name %>
+          <%= f.input :twitter_username, label: "Twitter Handler" %>
+          <%= f.input :website %>
+          <%= f.input :start_date, as: :string, input_html: { data: { provide: 'datepicker' } } %>
+          <%= f.input :end_date, as: :string, input_html: { data: { provide: 'datepicker' } } %>
+          <%= f.button :submit , "Submit", class: "btn" %>
+        <% end %>
+        <%= link_to "Back", root_path %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -47,9 +47,14 @@ GEM
     awesome_print (1.6.1)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bourbon (4.2.2)
+    bootstrap-datepicker-rails (1.6.1.1)
+      railties (>= 3.0)
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
+    bourbon (4.2.4)
       sass (~> 3.4)
-      thor
+      thor (~> 0.19)
     builder (3.2.2)
     bundler-audit (0.3.1)
       bundler (~> 1.2)
@@ -317,7 +322,9 @@ DEPENDENCIES
   acts-as-taggable-on
   autoprefixer-rails
   awesome_print
-  bourbon (~> 4.2.0)
+  bootstrap-datepicker-rails
+  bootstrap-sass
+  bourbon
   bundler-audit
   byebug
   capybara-webkit (>= 1.2.0)
@@ -331,6 +338,7 @@ DEPENDENCIES
   errorapp_notifier
   factory_girl_rails
   flutie
+  font-awesome-rails
   formulaic
   geocoder
   high_voltage
@@ -340,7 +348,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mini_magick
-  neat (~> 1.7.0)
+  neat
   newrelic_rpm (>= 3.9.8)
   normalize-rails (~> 3.0.0)
   pg
