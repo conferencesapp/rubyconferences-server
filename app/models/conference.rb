@@ -18,8 +18,10 @@ class Conference < ActiveRecord::Base
 
   after_update :create_geocode_and_tag_list
 
+  scope :active, -> { where(active: true) }
+
   def self.upcoming
-    where("start_date >= ?", Date.today).order("start_date")
+    active.where("start_date >= ?", Date.today).order("start_date")
   end
 
   # Specific bug in iOS version 1.2 with deleting old conferences from list
@@ -28,7 +30,7 @@ class Conference < ActiveRecord::Base
   end
 
   def self.past
-    where("start_date < ?", Date.today).order("start_date DESC")
+    active.where("start_date < ?", Date.today).order("start_date DESC")
   end
 
   def when

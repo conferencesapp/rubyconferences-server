@@ -7,6 +7,7 @@ FactoryGirl.define do
     twitter_username "twiiter"
     image_url "image_url"
     website "foo.bar"
+    active true
 
     trait :ruby do
       tag_list "ruby"
