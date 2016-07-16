@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   end
 
   resources :conferences, only: [:new, :create]
+  resources :announcements, only: :index do
+    member do
+      get :send_notification
+    end
+  end
 
   get "privacy" => "high_voltage/pages#show", id: "home"
 end
