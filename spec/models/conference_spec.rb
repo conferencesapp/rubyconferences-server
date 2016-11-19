@@ -29,10 +29,6 @@ RSpec.describe Conference, :type => :model do
       expect(conference).to validate_presence_of(:location)
     end
 
-    it "validates presence of image_url" do
-      expect(conference).to validate_presence_of(:image_url)
-    end
-
     it "validates presence of start_date" do
       expect(conference).to validate_presence_of(:start_date)
     end

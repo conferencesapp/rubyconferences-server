@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :conference do
     name "Conference Name"
-    location "Conference Location"
+    location "New York, NY"
     start_date Date.today
     end_date Date.today
     twitter_username "twiiter"

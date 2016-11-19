@@ -11,6 +11,22 @@ RailsAdmin.config do |config|
     all
   end
 
+  config.model Conference do
+    field :name
+    field :location
+    field :twitter_username
+    field :description
+    field :start_date
+    field :end_date
+    field :logo
+    field :latitude
+    field :longitude
+    field :website
+    field :cfp_end_at
+    field :active
+    field :tag_list
+  end
+
   config.included_models = RailsAdmin::Config.models_pool << 'Delayed::Job'
 
   config.model Delayed::Job do
