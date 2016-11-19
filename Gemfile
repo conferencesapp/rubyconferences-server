@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.2.2"
+ruby "2.3.1"
 
 gem "acts-as-taggable-on"
 gem "autoprefixer-rails"
@@ -27,7 +27,7 @@ gem "newrelic_rpm", ">= 3.9.8"
 gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
-gem "rails", "4.2.5"
+gem "rails", "4.2.7.1"
 gem "rails_admin"
 gem "recipient_interceptor"
 gem "refills"
