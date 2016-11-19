@@ -7,7 +7,6 @@ class Conference < ActiveRecord::Base
 
   with_options if: :active? do |object|
     object.validates :website, presence: true
-    object.validates :image_url, presence: true
     object.validates :location, presence: true
     object.validates :start_date, presence: true
     object.validates :end_date, presence: true
@@ -66,7 +65,9 @@ class Conference < ActiveRecord::Base
   def create_geocode_and_tag_list
     if active?
       geocode
-      self.tag_list << "ruby"
+      tag_list << "ruby"
+      Conference.skip_callback(:update, :after, :create_geocode_and_tag_list)
+      save
     end
   end
 end

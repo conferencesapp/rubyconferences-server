@@ -11,8 +11,9 @@
           <%= f.input :name %>
           <%= f.input :twitter_username, label: "Twitter Handler" %>
           <%= f.input :website %>
-          <%= f.input :start_date, as: :string, input_html: { data: { provide: 'datepicker' } } %>
-          <%= f.input :end_date, as: :string, input_html: { data: { provide: 'datepicker' } } %>
+          <%= f.input :start_date, as: :string, input_html: { data: { provide: 'datepicker', "date-format" =>  "dd/mm/yyyy" } } %>
+          <%= f.input :end_date, as: :string, input_html: { data: { provide: 'datepicker', "date-format" =>  "dd/mm/yyyy" } } %>
+          <%= f.input :location %>
           <%= f.button :submit , "Submit", class: "btn" %>
         <% end %>
         <%= link_to "Back", root_path %>
