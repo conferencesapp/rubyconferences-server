@@ -15,7 +15,7 @@ class Conference < ActiveRecord::Base
   validates :name, presence: true
   validates :twitter_username, presence: true
 
-  after_update :create_geocode_and_tag_list
+  after_validation :geocode
 
   scope :active, -> { where(active: true) }
 
@@ -60,14 +60,5 @@ class Conference < ActiveRecord::Base
 
   def pretty_cfp_end_at
     cfp_end_at.strftime("%d %b %Y")
-  end
-
-  def create_geocode_and_tag_list
-    if active?
-      geocode
-      tag_list << "ruby"
-      Conference.skip_callback(:update, :after, :create_geocode_and_tag_list)
-      save
-    end
   end
 end
