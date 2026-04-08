@@ -322,7 +322,7 @@ GEM
     title (0.0.5)
       i18n
       rails (>= 3.1)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
